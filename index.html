@@ -2,19 +2,95 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Train Schedule</title>
+	<title>Anytime is Train Time</title>
+
+	<!-- jQuery link -->
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- Firebase JavaScript Link -->
+	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+	<!-- Moment.js Link -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
 </head>
 <body>
-<h1>Trains Bitches homework</h1>
-<script>
 
+	<div class="container">
+		<!-- Jumbotron -->
+		<div class="jumbotron" style="background-color:brown; color: white;" >
 
+			<h1 class="text-center">Anytime is Train Time</h1>
+			<h3 class="text-center">Choo Choo Chee Chee</h3>
+		</div>
 
+		<!-- Current Employees Panel -->
+		<div class="panel panel-primary">
+		  <div class="panel-heading">
+		    <h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
+		  </div>
 
-</script>
+		  <div class="panel-body">
+		    <!-- Table -->
+		    <table class="table table-hover" id="employeeTable">
+		    	<thead>
+		    	  <tr>
+				    <th>Train Name</th>
+				    <th>Destination</th>
+				    <th>Frequency (min)</th>
+				    <th>Next Arrival</th>
+				    <th>Minutes Away($)</th>
+				    <th>Total Billed ($)</th>
+				  </tr>
+				 </thead>
 
-
-
+				 <tbody>
 	
+				</tbody>
+		    </table>
+		  </div>
+		</div>
+
+		<!-- Add Employees Panel -->
+		<div class="panel panel-primary">
+		  <div class="panel-heading">
+		    <h3 class="panel-title"><strong>Add Train</strong></h3>
+		  </div>
+
+		  <div class="panel-body">
+		    <form>
+			  <div class="form-group">
+			    <label for="empName">Train Name</label>
+			    <input type="text" class="form-control" id="empNameInput">
+			  </div>
+			  <div class="form-group">
+			    <label for="role">Destination</label>
+			    <input type="text" class="form-control" id="Dest">
+			  </div>
+			  <div class="form-group">
+			    <label for="startDate">First Train Time (Hh:mm-military time)</label>
+			    <input type="text" class="form-control" id="startDateInput">
+			  </div>
+			  <div class="form-group">
+			    <label for="monthlyRate">Frequency (min)</label>
+			    <input type="text" class="form-control" id="freq">
+			  </div>
+		  	  <button type="submit" class="btn btn-primary" id="addEmpButton">Submit</button>
+			</form>
+		  </div>
+		</div>
+	</div>
+
+	<!-- JavaScript file -->
+	<script src="assets/js/app.js"></script>
 </body>
 </html>
